@@ -10,6 +10,7 @@ import (
 	mrCreateCmd "github.com/profclems/glab/commands/mr/create"
 	mrDeleteCmd "github.com/profclems/glab/commands/mr/delete"
 	mrDiffCmd "github.com/profclems/glab/commands/mr/diff"
+	mrEditCmd "github.com/profclems/glab/commands/mr/edit"
 	mrForCmd "github.com/profclems/glab/commands/mr/for"
 	mrIssuesCmd "github.com/profclems/glab/commands/mr/issues"
 	mrListCmd "github.com/profclems/glab/commands/mr/list"
@@ -55,6 +56,7 @@ func NewCmdMR(f *cmdutils.Factory) *cobra.Command {
 	mrCmd.AddCommand(mrCreateCmd.NewCmdCreate(f, nil))
 	mrCmd.AddCommand(mrDeleteCmd.NewCmdDelete(f))
 	mrCmd.AddCommand(mrDiffCmd.NewCmdDiff(f, nil))
+	mrCmd.AddCommand(mrEditCmd.NewCmdEdit(f))
 	mrCmd.AddCommand(mrForCmd.NewCmdFor(f))
 	mrCmd.AddCommand(mrIssuesCmd.NewCmdIssues(f))
 	mrCmd.AddCommand(mrListCmd.NewCmdList(f, nil))
